@@ -74,6 +74,7 @@ export default new Vuex.Store({
     logout ({ commit }) {
       localStorage.removeItem('token')
       commit(LOGOUT)
+      localStorage.removeItem('token')
     },
     grabUser ({ commit }) {
       axios.get(`${process.env.VUE_APP_BASE_API_URL}/users/me/`, {
